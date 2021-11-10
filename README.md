@@ -1,4 +1,4 @@
-# currency convertor
+# guess the number
 
 [@DumitruIonut](https://github.com/DumitruIonut)
 
