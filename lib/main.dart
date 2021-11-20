@@ -45,11 +45,11 @@ class _HomepageState extends State<Homepage> {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: const <Widget>[
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  'I\'m thinking of a number between 1 and 100',
+                  "I'm thinking of a number between 1 and 100",
                   style: TextStyle(
                     fontSize: 18,
                   ),
@@ -59,11 +59,11 @@ class _HomepageState extends State<Homepage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: const <Widget>[
               Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Text(
-                  'It\'s your turn to guess my number!',
+                  "It's your turn to guess my number!",
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
@@ -75,7 +75,7 @@ class _HomepageState extends State<Homepage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
@@ -90,7 +90,7 @@ class _HomepageState extends State<Homepage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
@@ -105,19 +105,18 @@ class _HomepageState extends State<Homepage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               SizedBox(
                 height: 200,
                 width: 300,
                 child: Card(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       const Padding(
                         padding: EdgeInsets.all(6.0),
                         child: Text(
-                          "Try a number!",
+                          'Try a number!',
                           style: TextStyle(
                             fontSize: 35,
                             color: Color(0xFF6F6F75),
@@ -177,8 +176,8 @@ class _HomepageState extends State<Homepage> {
                                     context: context,
                                     builder: (BuildContext context) =>
                                         AlertDialog(
-                                          title: const Text("You guessed right"),
-                                          content: Text("It was $tstNumber"),
+                                          title: const Text('You guessed right'),
+                                          content: Text('It was $tstNumber'),
                                           actions: <Widget>[
                                             TextButton(
                                               onPressed: () =>
