@@ -127,9 +127,7 @@ class _HomepageState extends State<Homepage> {
                         padding: const EdgeInsets.all(5.0),
                         child: TextField(
                           keyboardType: TextInputType.number,
-                          inputFormatters: <TextInputFormatter>[
-                            FilteringTextInputFormatter.digitsOnly
-                          ],
+                          inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
                           style: const TextStyle(
                             fontSize: 20.0,
                           ),
@@ -140,8 +138,7 @@ class _HomepageState extends State<Homepage> {
                             enabledBorder: InputBorder.none,
                             errorBorder: InputBorder.none,
                             disabledBorder: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 15),
+                            contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                           ),
                           onChanged: (String? value) {
                             setState(() {
@@ -162,8 +159,7 @@ class _HomepageState extends State<Homepage> {
                         child: ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              if (controller.text.isNotEmpty &&
-                                  btnText == 'Guess') {
+                              if (controller.text.isNotEmpty && btnText == 'Guess') {
                                 youTried = 'You tried $tstNumber';
                                 if (tstNumber! > randNumber!) {
                                   tryAgain = 'Try lower';
@@ -174,23 +170,20 @@ class _HomepageState extends State<Homepage> {
                                   btnText = 'Reset';
                                   showDialog<String>(
                                     context: context,
-                                    builder: (BuildContext context) =>
-                                        AlertDialog(
-                                          title: const Text('You guessed right'),
-                                          content: Text('It was $tstNumber'),
-                                          actions: <Widget>[
-                                            TextButton(
-                                              onPressed: () =>
-                                                  Navigator.pop(context, 'Cancel'),
-                                              child: const Text('Cancel'),
-                                            ),
-                                            TextButton(
-                                              onPressed: () =>
-                                                  Navigator.pop(context, 'OK'),
-                                              child: const Text('OK'),
-                                            ),
-                                          ],
+                                    builder: (BuildContext context) => AlertDialog(
+                                      title: const Text('You guessed right'),
+                                      content: Text('It was $tstNumber'),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(context, 'Cancel'),
+                                          child: const Text('Cancel'),
                                         ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(context, 'OK'),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    ),
                                   );
                                   controller.clear();
                                 }
